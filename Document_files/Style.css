@@ -1,0 +1,68 @@
+*{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#box {
+    background-color: aqua;
+}
+
+.Heading {
+    color: red;
+    font-family: cursive;
+    font-size: 50px;
+    line-height: 70px;
+}
+
+button {
+    background-color: green;
+}
+
+.bocha {
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: overline;
+}
+
+.hahaha {
+    height: 100px;
+    width: 100px;
+    border-width : 30px;
+    border-style: solid;
+    border-color : black;
+    padding: 50px 50px 50px 50px;
+    background-color: rgb(210, 89, 33);
+    text-align: center;
+    margin-bottom: 70px;
+    display: block;
+}
+
+#outer{
+    line-height: normal;
+}
+
+.poozary {
+    height: 100px;
+    width: 100px;
+    background-color: rgba(210, 89, 33, 0.25);
+    border-radius: 50%;
+}
+
+#united{
+    display: none;
+}
+
+#Position{
+    position: static;
+    height: 100px;
+    width: 100px;
+    border-width : 30px;
+    border-style: solid;
+    border-color : black;
+    padding: 50px 50px 50px 50px;
+    background-color: rgb(210, 89, 33);
+    text-align: center;
+    margin-bottom: 70px;
+    display: block;
+}
+
+
