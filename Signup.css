@@ -33,6 +33,7 @@ body {
 
 input[type="email"],
 input[type="password"],
+input[type="username"],
 button {
     width: 70%;
     margin-bottom: 10px;
