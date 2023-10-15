@@ -1,0 +1,239 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: fantasy UI;
+    box-sizing: border-box;
+  }
+  .header {
+    height: 80px;
+    width: 100%;
+    padding: 0% 8%;
+    position: relative;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    width: 10px;
+    height: 10px;
+    color: black;
+    background-color: black;
+  }
+  .nav-links {
+    padding: 28px 0;
+  }
+  .nav-links li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 0;
+    position: relative;
+  }
+  .nav-links li a::after {
+    content: "";
+    background: #FD6262;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+  }
+  .nav-links li a:hover::after {
+    width: 100%;
+  }
+  .btn {
+    background: #a8aab0;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .btn:hover{
+    background-color: #fdba62;
+    color: #0c0d0e;
+    transition: all 0.5s ease 0s;
+    opacity: 0.8;
+  }
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #1a1a1a;
+    background-repeat: no-repeat;
+    font-size: 1.2rem;
+    margin-bottom: 0%;
+    background-image: url(/Images/wxw2.jpg);
+    background-size: cover;
+   
+    
+}
+
+.w3-container p{
+    position: absolute;
+    padding: 20px;
+    text-align:center;
+    color: black;
+}
+.w3-container:hover{
+     margin-top: 0px;
+
+}
+.w3-container1 {
+    margin-top: 250px;
+    margin-left: 100px;
+    color: #fff;
+    width: 300px;   
+    height: 200px;
+    background-color: rgb(20, 20, 22);
+    border-radius:10px;
+    opacity: 100%;
+    box-shadow: 10px rgb(20, 20, 22);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    transition:all 0.5s ease-out;
+    background-color: #242121;
+    margin-bottom: 150px;
+    gap: 10px;
+    justify-content: space-between;
+}   
+.w3-container1 p{
+    font-size: xx-large;
+    margin-top: 15px;
+    position: absolute;
+    padding: 85px;
+    text-align:center;
+    color: white;
+    width: 300px;
+   
+}
+.w3-container1 img{
+  margin-top: 300px;
+  /* position: absolute; */
+  padding: auto;
+  align-items: center; 
+  /* display: flex; */
+  margin: 0 auto;
+  margin-top: 20px;
+ 
+}
+.w3-container1:hover{
+     margin-top: 10px;
+
+}
+.container {
+    color: #fff;
+    margin-left: 100px;
+  }
+  .container h1 {
+    font-size: 70px;
+    margin-right: 20px;
+  }
+  .container p {
+    font-size: 20px;
+    left: 20px;
+  }
+
+i {
+    font-size: 1.4rem;
+}
+
+.footer {
+    padding-block: 5rem;
+
+    background-color: #0c0d0e;
+    color: #737375;
+    margin-top: 10%;
+    margin-bottom: none;
+    margin-bottom: 0%;
+}
+
+.footer-container {
+    max-width: 116rem;
+    margin: auto;
+    padding: 0 1.5rem;
+    overflow: hidden;
+    resize: horizontal;
+    margin-bottom: 0%;
+}
+
+.footer-top {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    row-gap: 2rem;
+}
+
+.footer-title {
+    font-size: 1.8rem;
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 0%;}
+
+.footer-list {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.footer-list-item {
+    list-style: none;
+}
+
+.footer-list-link {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.25s;
+}
+
+.footer-list-link:hover {
+    color: #636363;
+}
+
+.footer-divider {
+    margin-block: 2.5rem;
+    border: none;
+    border-top: 1px solid rgba(252, 255, 255, 0.1);
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.footer-bottom .footer-list {
+    flex-direction: row;
+}
+
+.Infotext{
+    font-size:xx-large;
+    color: #ffffff;
+    font-weight: 400;
+    margin-left: 200px;
+    margin-top: 250px;
+    margin-bottom: 0%;
+    
+}
+.innert{
+    font-size: x-large;
+    margin-top: 20px;
+    margin-bottom: 0%;
+    color: #8a8484;
+}
+.explore{
+    margin-left: 10% ;
+    margin-bottom: 0%;
+    font-size:45px;
+    color: #cccdcd;
+}
+
+
+
