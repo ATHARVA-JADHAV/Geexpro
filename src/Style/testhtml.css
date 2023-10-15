@@ -1,7 +1,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: fantasy UI;
+    font-family: "poppins", sans-serif;
     box-sizing: border-box;
   }
   .header {
@@ -54,110 +54,82 @@
     border-radius: 3px;
     cursor: pointer;
   }
-  .container {
-    color: #fff;
-    margin-left: 100px;
-  }
-  .container h1 {
-    font-size: 70px;
-    margin-right: 20px;
-  }
-  .container p {
-    font-size: 20px;
-    left: 20px;
-  }
   body {
-    background-color: #1A1A1A;
-    font-size: 1.2rem;
-    background-image: url("imgs/wxw2.jpg");    
+    background-color: rgb(20, 20, 22);
+    background-image: url("/Images/wxw2.jpg");
+    background-size: fill;
     background-repeat: no-repeat;
-    background-size: 100% 100%; 
-  }   
-  h1 {
-   
-    margin-top: 200;
+
   }
-  .w3-container {
-      margin-top: 20px;
-      color: #fff;
-      width: 300px;   
-      height: 200px;
-      background-color: rgb(20, 20, 22);
-      border-radius:10px;
-      /* opacity: 100%; */
-      box-shadow: 10px rgb(20, 20, 22);
-      box-sizing: border-box;
-      display: grid;
-      text-align: center;
-      transition:all 0.5s ease-out;
-  }   
-  .w3-container p{
-      position: absolute;
-      padding: 20px;
-      text-align:center;
-      color: black;
-  }
-  .w3-container:hover{
-       margin-top: 0px;
-  
-  }
-  .w3-container1 {
-      margin-top: 20px;
-      color: #fff;
-      width: 300px;   
-      height: 200px;
-      background-color: rgb(20, 20, 22);
-      border-radius:10px;
-      opacity: 100%;
-      box-shadow: 10px rgb(20, 20, 22);
-      box-sizing: border-box;
-      display: grid;
-      text-align: center;
-      transition:all 0.5s ease-out;
-      background-color: #242121;
-      flex-direction: row;
-      justify-content: space-evenly;
-      margin-bottom: 150px;
-  }   
-  .w3-container1 p{
-      position: absolute;
-      padding: 85px;
-      text-align:center;
-      color: white;
-      width: 300px;
-     
-  }
-  .w3-container1 img{
-    position: absolute;
-    padding: auto;
-    align-items: center; 
-    display: block;
+  /* .w3-container p{
+    margin-left: 200px;
+    margin-top: 100px;
+    margin-bottom: 0px;
+    color: #ffff;
+    width: 1500px;   
+    height: 3000px;
+    background-color: rgb(20, 20, 22);
+    border-radius:10px;
+    box-sizing: border-box;
+    display: grid;
+    text-align: center;
+    padding: 20px;
+    transition: all 0.5s ease-out;
+} */
+.quiz-container {
+    max-width: 800px;
     margin: 0 auto;
-    margin-top: 20px;
-   
-  }
-  .w3-container1:hover{
-       margin-top: 0px;
-  
-  }
-  .bg{
-      color: #ffff;
-      width: auto;
-      min-width: 85%;
-      border-radius: 10px;    
-  }
-  .img1{
-      background-image: url("wxw2.jpg");    
-      background-repeat: no-repeat;
-      background-size: 100% 100%;
-  }
-  
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.quiz,
+.choices {
+    list-style-type: none;
+    padding: 0;
+}
+
+.choices li {
+    margin-bottom: 5px;
+}
+
+.choices label {
+    display: flex;
+    align-items: center;
+}
+
+.choices label,
+input[type="radio"] {
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin-right: 8px;
+}
+
+.view-results {
+    padding: 1rem;
+    cursor: pointer;
+    font-size: inherit;
+    color: white;
+    background: teal;
+    border-radius: 8px;
+    margin-right: 5px;
+}
+
+.my-results {
+    padding: 1rem;
+    border: 1px solid goldenrod;
+}
+
+
   .footer {
     padding-block: 5rem;
-  
     background-color: #0c0d0e;
     color: #737375;
-    margin-top: 0%;
+    margin-top: 5%;
     margin-bottom: none;
     margin-bottom: 0%;
   }
@@ -219,4 +191,3 @@
   .footer-bottom .footer-list {
     flex-direction: row;
   }
-  

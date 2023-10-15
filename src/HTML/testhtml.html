@@ -1,9 +1,11 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>COMPETE</title>
-    <link href="/src/Style/Test.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="/src/Style/testhtml.css" rel="stylesheet" type="text/css" />
   </head>
-
   <body>
     <div class="header">
       <nav>
@@ -59,153 +61,43 @@
         </ul>
       </nav>
     </div>
-    <script>
-      function loadHomePage() {
-        window.location.href = "g.html";
-      }
-    </script>
-    <script>
-      function loadSignupPage() {
-        window.location.href = "Signup.html";
-      }
-    </script>
-    <script>
-      function loadTestPage() {
-        window.location.href = "test.html";
-      }
-    </script>
-    <script>
-      function loadcoursesPage() {
-        window.location.href = "courses.html";
-      }
-    </script>
-    <div class="container">
-      <h1>TESTS</h1>
-      <br />
-      <p style="background-image: url('/Images/wxw2.jpg')"></p>
-      <p>
-        This will be your hub to all the tests and quizes we take to test your
-        aptitude.
-      </p>
-      <br />
-      <p>
-        There are different types of tests you can take according to your
-        skills.
-      </p>
+    <div class="questions">
+      <ul class="quiz">
+        <li>
+          <h4>Question 1</h4>
+          <ul class="choices">
+            <li>
+              <label>
+                <input type="radio" name="question1" value="A" />
+                <span>Option A</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="question1" value="B" />
+                <span>Option B</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="question1" value="C" />
+                <span>Option C</span>
+              </label>
+            </li>
+            <li>
+              <label>
+                <input type="radio" name="question1" value="D" />
+                <span>Option D</span>
+              </label>
+            </li>
+          </ul>
+        </li>
+        <!-- Repeat the above structure for the remaining 14 questions -->
+      </ul>
+      <button class="view-results" onclick="returnScore()">View Results</button>
+      <span id="myresults" class="my-results">My results will appear here</span>
+      ```
     </div>
-    <div class="test_container">
-      <div class="w3-container">
-        <p class="bruh">
-          <b>HTML</b>
-          <img
-            src="/SVGs/html.svg"
-            class="logoz"
-            alt="course1"
-            height="50px"
-            width="70px"
-            style="position: initial; right: 200px"
-          />
-          <button style="width: 80px; height: 35px" class="btest">
-            Begin test
-          </button>
-        </p>
-      </div>
-      <div class="w3-container">
-        <p class="bruh">
-          <b>Javascript</b>
-          <img
-            src="/SVGs/JS.svg"
-            class="logoz"
-            alt="course1"
-            height="50px"
-            width="70px"
-            style="position: initial; right: 200px"
-          />
-          <button style="width: 80px; height: 35px" class="btest">
-            Begin test
-          </button>
-        </p>
-      </div>
-      <div class="w3-container">
-        <p class="bruh">
-          <b>React</b>
-          <img
-            src="/SVGs/react.svg"
-            class="logoz"
-            alt="course1"
-            height="50px"
-            width="70px"
-            style="position: initial; right: 200px"
-          />
-          <button style="width: 80px; height: 35px" class="btest">
-            Begin test
-          </button>
-        </p>
-      </div>
-    </div>
-
-    <div class="zest_container">
-      <div class="w3-container">
-        <p class="bruh">
-          <b>Java</b>
-          <img
-            src="/SVGs/java.svg"
-            class="logoz"
-            alt="course1"
-            height="50px"
-            width="70px"
-            style="position: initial; right: 200px"
-          />
-          <button style="width: 80px; height: 35px" class="btest">
-            Begin test
-          </button>
-        </p>
-      </div>
-      <div class="w3-container">
-        <p class="bruh">
-          <b>Python</b>
-          <img
-            src="/SVGs/python.svg"
-            class="logoz"
-            alt="course1"
-            height="50px"
-            width="70px"
-            style="position: initial; right: 200px"
-          />
-          <button style="width: 80px; height: 35px" class="btest">
-            Begin test
-          </button>
-        </p>
-      </div>
-      <div class="w3-container">
-        <p class="bruh">
-          <b>Django</b>
-          <img
-            src="/SVGs/django.svg"
-            class="logoz"
-            alt="course1"
-            height="50px"
-            width="70px"
-            style="position: initial; right: 200px"
-          />
-          <button style="width: 80px; height: 35px" class="btest">
-            Begin test
-          </button>
-        </p>
-      </div>
-    </div>
-    <script>
-      function loadLearnPage() {
-        window.location.href = "Courses.html";
-      }
-    </script>
-
-    <script>
-      function loadSignupPage() {
-        window.location.href = "Signup.html";
-      }
-    </script>
-
     <footer class="footer">
       <div class="footer-container">
         <div class="footer-top">

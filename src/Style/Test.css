@@ -67,7 +67,7 @@
   }
   body {
     background-color: rgb(20, 20, 22);
-    background-image: url("imgs/wxw2.jpg");
+    background-image: url("/Images/wxw2.jpg");
     background-size: 100% 100%;
     background-repeat: inherit;
   }
@@ -84,12 +84,10 @@
       height: 200px;
       background-color: rgb(20, 20, 22);
       border-radius:10px;
-      /* box-shadow: 10px rgb(20, 20, 22); */
       box-sizing: border-box;
       display: grid;
       text-align: center;
       padding: 20px;
-      /* mask-image: url(./174854.png); */
       transition: all 0.5s ease-out;
   }
  
@@ -204,4 +202,17 @@
 
 .footer-bottom .footer-list {
   flex-direction: row;
+}
+.btest{
+  color: #000000;
+  border-radius: 10px;
+  border: 0;
+}
+.btest:hover{
+  color: #ffffff;
+  background-color: #535555;
+}
+.btest:active{
+  color: #1c1a1a;
+  background-color: #bbbdbd;
 }
