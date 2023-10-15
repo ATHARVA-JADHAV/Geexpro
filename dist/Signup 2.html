@@ -9,7 +9,7 @@
   <body>
     <div class="container">
       <div class="signup-form">
-        <h2 class="signup-heading">Sign Up yes</h2>
+        <h2 class="signup-heading">Sign Up</h2>
 
         <form type="submit" id="signup-form" class="Signup">
           <div class="inputbox">
@@ -21,11 +21,11 @@
           </div>
 
           <div class="inputbox">
-            <input type="password" id="password" placeholder="Password" name="password">
+            <input type="password" id="password" placeholder="Password" name="password" minlength="8" required>
           </div>
 
           <div class="inputbox">
-            <input type="password" id="conpassword" placeholder="Confirm-Password" name="conpass">
+            <input type="password" id="conpassword" placeholder="Confirm-Password" name="conpass" minlength="8" required>
           </div>
 
           <div class="inputbox">
@@ -33,20 +33,23 @@
         </div>
         </form>
         <p class="already">
-          Already have an account? <a href="login.html">Log in</a>
+          Already have an account? <a href="/src/HTML/Login.html">Log in</a>
         </p>
       </div>
+      
     </div>
+   
+    
     <script src="bundle.js"></script>
 
-    <script>
+    <!-- <script>
       function loadHomePage() {
         window.location.href = "index.html";
       }
-    </script>
+    </script> -->
     <div>
 
     </div>
-    <script type="module" src="./index."></script> <!-- Add your JavaScript file here -->
+    <script type="module" src="/src/index.js"></script> 
   </body>
 </html>
