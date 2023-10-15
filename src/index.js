@@ -35,23 +35,45 @@ getDocs(colRef)
   })
 
 
-window.onload = function() {
-  const addSignupForm = document.getElementById('signup-form');
-  addSignupForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-
-    addDoc(colRef, {
-      username: addSignupForm.username.value,
-      email: addSignupForm.email.value,
-      password: addSignupForm.password.value,
-      conpass: addSignupForm.conpass.value,
-    })
-      .then(() => {
-        addSignupForm.reset();
+  window.onload = function() {
+    const addSignupForm = document.getElementById('signup-form');
+    const password = document.getElementById('password');
+    const conpassword = document.getElementById('conpassword');
+    addSignupForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      if (password.value === '' || conpassword.value === '') {
+        alert('Please fill in both password fields');
+        return;
+      }
+  
+      if (password.value !== conpassword.value) {
+        alert('Passwords do not match');
+        return;
+      }
+  
+      addDoc(colRef, {
+        username: addSignupForm.username.value,
+        email: addSignupForm.email.value,
+        password: addSignupForm.password.value,
+        conpass: addSignupForm.conpass.value,
       })
-      .catch((error) => {
-        console.error('Error adding document: ', error);
-      });
-  });
+        .then(() => {
+         
+          window.location.href =""; 
+          
+          // addSignupForm.reset();
+          
+        })
+        .catch((error) => {
+          console.error('Error adding document: ', error);
+          
+        });
+       
+    });
+  }
+  
+  
+  
 
-}
+
