@@ -54,13 +54,12 @@
     border-radius: 3px;
     cursor: pointer;
   }
-  body {
-    background-color: rgb(20, 20, 22);
-    background-image: url("/Images/wxw2.jpg");
+  /* body {
+    background-image: url(/Images/wxw2.jpg);
     background-size: fill;
     background-repeat: no-repeat;
 
-  }
+  } */
   /* .w3-container p{
     margin-left: 200px;
     margin-top: 100px;
@@ -191,3 +190,30 @@ input[type="radio"] {
   .footer-bottom .footer-list {
     flex-direction: row;
   }
+
+  .questions{
+    width: 1000px;
+    height: 1200px;
+    background-color: rgba(55, 48, 48, 0.4);
+    margin-left: 220px;
+    margin-top: 100px;
+    opacity: 50%;
+
+  }
+
+  .headin{
+    color: #f1f1f1;
+    text-align: center;
+    padding-top: 30px;
+  }
+  .form{
+    margin-left: 160px;
+    margin-top: 100px;
+    color: #f1f1f1;
+    font-size: large;
+   }
+  
+   .main{
+    background-image: url(/Images/wxw2.jpg);
+    background-size: contain;
+   }

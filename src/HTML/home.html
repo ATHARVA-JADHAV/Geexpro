@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/src/Style/home.css" />
     <link href="insta.png" rel="stylesheet" />
   </head>
-
+  
   <body>
     <div class="header">
       <nav>
@@ -54,11 +54,14 @@
             >
           </li>
           <li
-            class="btn"
-            href="javascript:void(0);"
-            onclick="loadSignupPage();"
-          >
-            SignUp
+          class="btn"
+          href="javascript:void(0);"
+          id="Signupbutton"
+          onclick="loadSignupPage();"
+        >
+        </li>
+      
+            
           </li>
         </ul>
       </nav>
@@ -233,4 +236,17 @@
       </div>
     </footer>
   </body>
+
+  
+    <script>
+  // Script to manipulate the button
+  var signupButton = document.getElementById("Signupbutton");
+  if (true) {
+    // Condition to check, replace with your own condition
+    signupButton.innerHTML = "Name"; // Change the inner HTML of the button to "Name"
+  } else {
+    signupButton.innerHTML = "Value"; // Change the inner HTML of the button to "Value"
+  }
+
+  </script>
 </html>
