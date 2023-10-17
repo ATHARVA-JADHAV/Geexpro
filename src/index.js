@@ -50,6 +50,7 @@ getDocs(colRef)
       if (password.value !== conpassword.value) {
         alert('Passwords do not match');
         return;
+        console.log("submited");
       }
   
       addDoc(colRef, {
@@ -59,11 +60,10 @@ getDocs(colRef)
         conpass: addSignupForm.conpass.value,
       })
         .then(() => {
-         
-          window.location.href =""; 
-          
+          console.log("This is active ");
+          window.location.href ="http://127.0.0.1:5501/src/HTML/home.html"
           // addSignupForm.reset();
-          
+        
         })
         .catch((error) => {
           console.error('Error adding document: ', error);
