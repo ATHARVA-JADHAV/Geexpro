@@ -75,6 +75,7 @@ window.onload = function signup () {
   });
 }
 
+<<<<<<< Updated upstream
 // async function login() {
 //   const username = document.querySelector('input[name="username"]').value;
 //   const password = document.querySelector('input[name="password"]').value;
@@ -110,3 +111,21 @@ window.onload = function signup () {
 //   loginButton.addEventListener('click', login); // Handle login when the login button is clicked
 // };
 
+=======
+const loginForm = document.querySelector('login-form');
+loginForm.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const username = loginForm.querySelector('input[name="username"]').value;
+  const password = loginForm.querySelector('input[name="password"]').value;
+
+  const querySnapshot = await getDocs(collection(db, 'Signup'));
+  const user = querySnapshot.docs.find((doc) => doc.data().username === username);
+
+  if (user && user.data().password === password) {
+    window.location.href = '/src/HTML/home.html';
+  } else {
+    alert('Invalid username or password. Please try again.');
+  }
+});
+>>>>>>> Stashed changes
