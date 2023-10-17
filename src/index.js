@@ -36,9 +36,10 @@ getDocs(colRef)
 
 
   window.onload = function() {
-    const addSignupForm = document.getElementById('signup-form');
+    const addSignupForm = document.getElementById('signupform');
     const password = document.getElementById('password');
     const conpassword = document.getElementById('conpassword');
+    const errorElement = document.getElementById('error-message');
     addSignupForm.addEventListener('submit', (e) => {
       e.preventDefault();
       
@@ -52,6 +53,8 @@ getDocs(colRef)
         return;
         console.log("submited");
       }
+      errorElement.innerText = '';
+
   
       addDoc(colRef, {
         username: addSignupForm.username.value,
@@ -72,6 +75,17 @@ getDocs(colRef)
        
     });
   }
+  function redirectToHomePage() {
+    // Change the URL to the home page
+    window.location.href = "http://127.0.0.1:5501/src/HTML/home.html";
+  }
+  
+
+  
+
+ 
+  
+
   
   
   
