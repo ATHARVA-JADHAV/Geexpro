@@ -60,7 +60,7 @@ getDocs(colRef)
         conpass: addSignupForm.conpass.value,
       })
         .then(() => {
-          console.log("This is active");
+          console.log("This is active ");
           window.location.href ="http://127.0.0.1:5501/src/HTML/home.html"
           // addSignupForm.reset();
         
