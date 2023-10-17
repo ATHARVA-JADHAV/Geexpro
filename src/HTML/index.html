@@ -32,23 +32,23 @@
               href="javascript:void(0);"
               onclick="loadTestPage();"
               class="mr-5 hover:text-gray-900"
-              >Practice</a
-            >
-          </li>
-          <li>
-            <a
-              href="javascript:void(0);"
-              onclick="location.href='/test.html'"
-              class="mr-5 hover:text-gray-900"
               >Compete</a
             >
           </li>
           <li>
             <a
               href="javascript:void(0);"
-              onclick="loadTestPage();"
+              onclick="loadLeaderPage();"
               class="mr-5 hover:text-gray-900"
-              >Mentorship</a
+              >Leaderboard</a
+            >
+          </li>
+          <li>
+            <a
+              href="javascript:void(0);"
+              onclick="loadInternPage();"
+              class="mr-5 hover:text-gray-900"
+              >Internship</a
             >
           </li>
           <li
@@ -59,12 +59,17 @@
             SignUp
           </li>
         </ul>
+        <script>
+          function loadHomePage() {
+          window.location.href = "home.html";
+}
+        </script>
       </nav>
       <h1 class="desc-container" style="font-family:'Times New Roman', Times, serif; font-size: x-large; font-weight: 500;">Welcome to our Courses Webpage –your gateway to a world of knowledge and skill-building! At our online learning platform, we're dedicated to providing high-quality courses on a wide range of subjects, designed to empower learners of all levels. Whether you're a beginner looking to explore a new interest or a professional seeking to advance your career, our courses offer a path to growth, enrichment, and achievement.</h1>
     </div>
     <script>
       function loadHomePage() {
-        window.location.href = "g.html";
+        window.location.href = "/src/HTML/home.html";
       }
     </script>
     <script>
@@ -74,7 +79,7 @@
     </script>
     <script>
       function loadTestPage() {
-        window.location.href = "test.html";
+        window.location.href = "Test.html";
       }
     </script>
     <script>
@@ -82,12 +87,15 @@
         window.location.href = "courses.html";
       }
     </script>
+    
     <div>
       <div style="display: flex; flex-direction: row; justify-content:space-between; width: 40%; margin-left:150px;margin-top:500px;align-items:center" >
         <p style="color: #fff;font-size:50px">What to expect?</p>
       </div>
   
-  
+      <script>
+
+      </script>
       <div style="display: flex; flex-direction: row; justify-content:space-between; width: 90%; margin-left:100px; min-height:250px;align-items:center" >
         <div class="w3-container1">
           <p>Learn from Industry Leaders of Top Brands- Google, Microsoft and more</p>
@@ -267,5 +275,29 @@
         </div>
       </footer>
     </div>
+    <script>
+      function loadHomePage() {
+        window.location.href = "/src/HTML/home.html";
+      }</script>
+      <script>
+        function loadcoursesPage() {
+          window.location.href = "/src/HTML/index.html";
+        }</script>
+        <script>
+          function loadLeaderPage() {
+            window.location.href = "/src/HTML/leaderbd.html";
+          }</script>
+          <script>
+            function loadTestPage() {
+              window.location.href = "/src/HTML/Test.html";
+            }</script>
+            <script>
+              function loadInternPage() {
+                window.location.href = "/src/HTML/Test.html";
+              }</script>
+              <script>
+                function loadSignupPage() {
+                  window.location.href = "/dist/Signup 2.html";
+                }</script>
   </body>
 </html>
