@@ -35,59 +35,78 @@ getDocs(colRef)
   })
 
 
-  window.onload = function() {
-    const addSignupForm = document.getElementById('signupform');
-    const password = document.getElementById('password');
-    const conpassword = document.getElementById('conpassword');
-    const errorElement = document.getElementById('error-message');
-    addSignupForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      
-      if (password.value === '' || conpassword.value === '') {
-        alert('Please fill in both password fields');
-        return;
-      }
   
-      if (password.value !== conpassword.value) {
-        alert('Passwords do not match');
-        return;
-        console.log("submited");
-      }
-      errorElement.innerText = '';
+window.onload = function signup () {
+  const addSignupForm = document.getElementById('signup-form');
 
-  
-      addDoc(colRef, {
-        username: addSignupForm.username.value,
-        email: addSignupForm.email.value,
-        password: addSignupForm.password.value,
-        conpass: addSignupForm.conpass.value,
+
+  const password = document.getElementById('password');
+  const conpassword = document.getElementById('conpassword');
+
+
+  addSignupForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    if (password.value === '' || conpassword.value === '') {
+      alert('Please fill in both password fields');
+      return;
+    }
+
+    if (password.value !== conpassword.value) {
+      alert('Passwords do not match');
+      return;
+    }
+
+    addDoc(colRef, {
+      username: addSignupForm.username.value,
+      email: addSignupForm.email.value,
+      password: addSignupForm.password.value,
+      conpass: addSignupForm.conpass.value,
+    })
+      .then(() => {
+        console.log("Signup successful");
+        // Redirect to the home page after successful signup
+        window.location.href = "http://127.0.0.1:5501/src/HTML/home.html";
       })
-        .then(() => {
-          console.log("This is active ");
-          window.location.href ="http://127.0.0.1:5501/src/HTML/home.html"
-          // addSignupForm.reset();
-        
-        })
-        .catch((error) => {
-          console.error('Error adding document: ', error);
-          
-        });
-       
-    });
-  }
-  function redirectToHomePage() {
-    // Change the URL to the home page
+      .catch((error) => {
+        console.error('Error adding document: ', error);
+      });
+      
+  });
+}
+
+async function login() {
+  const username = document.querySelector('input[name="username"]').value;
+  const password = document.querySelector('input[name="password"]').value;
+
+  const querySnapshot = await getDocs(collection(db, 'Signup'));
+  let user = null;
+
+  querySnapshot.forEach((doc) => {
+    const data = doc.data();
+
+    if (data.username === username && data.password === password) {
+      user = data;
+    }
+  });
+
+  if (user) {
     window.location.href = "http://127.0.0.1:5501/src/HTML/home.html";
+  } else {
+    alert("Invalid username or password");
   }
-  
+}
 
-  
+// Event listeners
+window.onload = function() {
+  const addSignupForm = document.getElementById('signup-form');
+  const loginButton = document.getElementById('login-button');
 
- 
-  
+  addSignupForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    signup();
+  });
 
-  
-  
-  
-
+  loginButton.addEventListener('click', login); // Handle login when the login button is clicked
+};
 
