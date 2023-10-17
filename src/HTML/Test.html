@@ -30,23 +30,23 @@
               href="javascript:void(0);"
               onclick="loadTestPage();"
               class="mr-5 hover:text-gray-900"
-              >Practice</a
-            >
-          </li>
-          <li>
-            <a
-              href="javascript:void(0);"
-              onclick="location.href='/test.html'"
-              class="mr-5 hover:text-gray-900"
               >Compete</a
             >
           </li>
           <li>
             <a
               href="javascript:void(0);"
-              onclick="loadTestPage();"
+              onclick="loadLeaderPage();"
               class="mr-5 hover:text-gray-900"
-              >Mentorship</a
+              >Leaderboard</a
+            >
+          </li>
+          <li>
+            <a
+              href="javascript:void(0);"
+              onclick="loadInternPage();"
+              class="mr-5 hover:text-gray-900"
+              >Internship</a
             >
           </li>
           <li
@@ -230,25 +230,10 @@
             <h6 class="footer-title">Contact Us</h6>
             <ul class="footer-list">
               <li class="footer-list-item">
-                <a href="#" class="footer-list-link"
-                  ><br />
-                  <img
-                    src="imgs/instagram.svg"
-                    alt="course1"
-                    height="30px"
-                    width="40px"
-                    style="position: initial; right: 200px"
-                /></a>
+                <a href="#" class="footer-list-link"></a>
               </li>
               <li class="footer-list-item">
-                <a href="#" class="footer-list-link"
-                  ><img
-                    src="imgs/twitter.svg"
-                    alt="course1"
-                    height="30px"
-                    width="40px"
-                    style="position: initial; right: 200px"
-                /></a>
+                <a href="#" class="footer-list-link">Instagram</a>
               </li>
               <li class="footer-list-item">
                 <a href="#" class="footer-list-link">Linked-in</a>
@@ -307,5 +292,35 @@
         </div>
       </div>
     </footer>
+    <script>
+      function loadHomePage() {
+        window.location.href = "/src/HTML/home.html";
+      }
+    </script>
+    <script>
+      function loadcoursesPage() {
+        window.location.href = "/src/HTML/index.html";
+      }
+    </script>
+    <script>
+      function loadLeaderPage() {
+        window.location.href = "/src/HTML/leaderbd.html";
+      }
+    </script>
+    <script>
+      function loadTestPage() {
+        window.location.href = "/src/HTML/Test.html";
+      }
+    </script>
+    <script>
+      function loadInternPage() {
+        window.location.href = "/src/HTML/internships.html";
+      }
+    </script>
+    <script>
+      function loadSignupPage() {
+        window.location.href = "/dist/Signup 2.html";
+      }
+    </script>
   </body>
 </html>
