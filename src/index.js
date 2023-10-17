@@ -75,38 +75,38 @@ window.onload = function signup () {
   });
 }
 
-async function login() {
-  const username = document.querySelector('input[name="username"]').value;
-  const password = document.querySelector('input[name="password"]').value;
+// async function login() {
+//   const username = document.querySelector('input[name="username"]').value;
+//   const password = document.querySelector('input[name="password"]').value;
 
-  const querySnapshot = await getDocs(collection(db, 'Signup'));
-  let user = null;
+//   const querySnapshot = await getDocs(collection(db, 'Signup'));
+//   let user = null;
 
-  querySnapshot.forEach((doc) => {
-    const data = doc.data();
+//   querySnapshot.forEach((doc) => {
+//     const data = doc.data();
 
-    if (data.username === username && data.password === password) {
-      user = data;
-    }
-  });
+//     if (data.username === username && data.password === password) {
+//       user = data;
+//     }
+//   });
 
-  if (user) {
-    window.location.href = "http://127.0.0.1:5501/src/HTML/home.html";
-  } else {
-    alert("Invalid username or password");
-  }
-}
+//   if (user) {
+//     window.location.href = "http://127.0.0.1:5501/src/HTML/home.html";
+//   } else {
+//     alert("Invalid username or password");
+//   }
+// }
 
-// Event listeners
-window.onload = function() {
-  const addSignupForm = document.getElementById('signup-form');
-  const loginButton = document.getElementById('login-button');
+// // Event listeners
+// window.onload = function() {
+//   const addSignupForm = document.getElementById('signup-form');
+//   const loginButton = document.getElementById('login-button');
 
-  addSignupForm.addEventListener('submit', (e) => {
-    e.preventDefault();
-    signup();
-  });
+//   addSignupForm.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     signup();
+//   });
 
-  loginButton.addEventListener('click', login); // Handle login when the login button is clicked
-};
+//   loginButton.addEventListener('click', login); // Handle login when the login button is clicked
+// };
 
