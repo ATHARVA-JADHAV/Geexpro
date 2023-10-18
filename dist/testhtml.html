@@ -385,94 +385,11 @@
     </footer>
 
     <script>
-      document
-        .getElementById("quizform")
-        .addEventListener("submit", function (e) {
-          e.preventDefault(); // Prevent the form from submitting
-          let score = 0;
-
-          // Check answers for question 1
-          if (document.getElementById("q1-option4").checked) {
-            score += 4;
-          }
-
-          // Check answers for question 2
-          if (document.getElementById("q2-option3").checked) {
-            score += 4;
-          }
-
-          // Check answers for question 3
-          if (document.getElementById("q3-option1").checked) {
-            score += 4;
-          }
-
-          // Check answers for question 4
-          if (document.getElementById("q4-option1").checked) {
-            score += 4;
-          }
-
-          // Check answers for question 5
-          if (document.getElementById("q5-option2").checked) {
-            score += 4;
-          }
-
-          // Check answers for question 6
-          if (document.getElementById("q6-option3").checked) {
-            score += 4;
-          }
-
-          // Check answers for question 7
-          if (document.getElementById("q7-option1").checked) {
-            score += 4;
-          }
-
-          // Check answers for question 8
-          if (document.getElementById("q8-option2").checked) {
-            score += 4;
-          }
-
-          // Check answers for question 9
-          if (document.getElementById("q9-option2").checked) {
-            score += 4;
-          }
-
-          // Check answers for question 10
-          if (document.getElementById("q10-option4").checked) {
-            score += 4;
-          }
-
-          // Check answers for question 11
-          if (document.getElementById("q11-option2").checked) {
-            score += 4;
-          }
-
-          // Check answers for question 12
-          if (document.getElementById("q12-option1").checked) {
-            score += 4;
-          }
-
-          // Check answers for question 13
-          if (document.getElementById("q13-option2").checked) {
-            score += 4;
-          }
-
-          // Check answers for question 14
-          if (document.getElementById("q14-option4").checked) {
-            score += 4;
-          }
-
-          // Check answers for question 15
-          if (document.getElementById("q15-option1").checked) {
-            score += 4;
-          }
-
-          // Display the score
-          alert("Your score is: " + score);
-        });
+     
     </script>
 
     <script src="bundle.js"></script>
 
-    <script type="module" src="/src/testhtml.js"></script>
+    <script type="module" src="../src/index.js"></script>
   </body>
 </html>
