@@ -2,7 +2,7 @@
 import { initializeApp } from 'firebase/app'
 import {
   getFirestore, collection, getDocs,
-  addDoc, 
+  addDoc,
 } from 'firebase/firestore'
 
 const firebaseConfig = {
@@ -25,7 +25,7 @@ getDocs(colRef)
   .then((snapshot) => {
     let Signup = []
     snapshot.docs.forEach((doc) => {
-        Signup.push({...doc.data(), id: doc.id })
+      Signup.push({ ...doc.data(), id: doc.id })
     })
     console.log(Signup)
   })
@@ -34,9 +34,11 @@ getDocs(colRef)
     console.log(err.message)
   })
 
+console.log(localStorage.getItem('username'))
 
-  
-window.onload = function signup () {
+
+
+window.onload = function signup() {
   const addSignupForm = document.getElementById('signup-form');
 
 
@@ -71,61 +73,195 @@ window.onload = function signup () {
       .catch((error) => {
         console.error('Error adding document: ', error);
       });
-      
+
   });
 }
 
-<<<<<<< Updated upstream
-// async function login() {
-//   const username = document.querySelector('input[name="username"]').value;
-//   const password = document.querySelector('input[name="password"]').value;
+// const loginForm = document.getElementsByClassName('login-form');
+// loginForm.addEventListener('submit', async (e) => {
+//   e.preventDefault();
+
+//   const username = loginForm.querySelector('input[name="username"]').value;
+//   const password = loginForm.querySelector('input[name="password"]').value;
 
 //   const querySnapshot = await getDocs(collection(db, 'Signup'));
-//   let user = null;
+//   const user = querySnapshot.docs.find((doc) => doc.data().username === username);
 
-//   querySnapshot.forEach((doc) => {
-//     const data = doc.data();
+//   console.log(user);
 
-//     if (data.username === username && data.password === password) {
-//       user = data;
-//     }
-//   });
+//   // if (user && user.data().password === password) {
+//     // window.location.href = '/src/HTML/home.html';
+//   // } else {
+//   //   alert('Invalid username or password. Please try again.');
+//   // }
+// });
 
-//   if (user) {
-//     window.location.href = "http://127.0.0.1:5501/src/HTML/home.html";
-//   } else {
-//     alert("Invalid username or password");
-//   }
+window.onload = function login() {
+  const loginForm = document.getElementById('login-form');
+
+  loginForm?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const username = loginForm.querySelector('input[name="username"]').value;
+    const password = loginForm.querySelector('input[name="password"]').value;
+
+    const querySnapshot = await getDocs(collection(db, 'Signup'));
+    const user = querySnapshot.docs.find((doc) => doc.data().username === username);
+
+    // user? console.log(user.data()) : alert('Incorrect Username')
+
+    // console.log(user.data());
+
+    if (user && user.data().password === password) {
+      // window.location.href='Signup2.html';
+      localStorage.setItem('username', username);
+      window.location.href = '/src/HTML/home.html';
+      // alert('SYSTUM')
+    } else {
+      alert('Invalid username or password. Please try again.');
+    }
+  });
+}
+
+// function HtmlTestScore() {
+const chootad = document
+  .getElementById("quizform");
+
+chootad?.addEventListener("submit", function (e) {
+  e.preventDefault(); // Prevent the form from submitting
+  let score = 0;
+
+  // Check answers for question 1
+  if (document.getElementById("q1-option4").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 2
+  if (document.getElementById("q2-option3").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 3
+  if (document.getElementById("q3-option1").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 4
+  if (document.getElementById("q4-option1").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 5
+  if (document.getElementById("q5-option2").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 6
+  if (document.getElementById("q6-option3").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 7
+  if (document.getElementById("q7-option1").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 8
+  if (document.getElementById("q8-option2").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 9
+  if (document.getElementById("q9-option2").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 10
+  if (document.getElementById("q10-option4").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 11
+  if (document.getElementById("q11-option2").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 12
+  if (document.getElementById("q12-option1").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 13
+  if (document.getElementById("q13-option2").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 14
+  if (document.getElementById("q14-option4").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 15
+  if (document.getElementById("q15-option1").checked) {
+    score += 4;
+  }
+
+  // Display the score
+  // alert("Your score is: " + score);
+  console.log(score);
+
+  const colRef2 = collection(db, 'html_quiz_scores')
+
+  getDocs(colRef2)
+    .then((snapshot) => {
+      let html_quiz_scores = []
+      snapshot.docs.forEach((doc) => {
+        html_quiz_scores.push({ ...doc.data(), id: doc.id })
+      })
+      console.log(html_quiz_scores)
+    })
+
+    .catch(err => {
+      console.log(err.message)
+    })
+
+  addDoc(colRef2, {
+    username: localStorage.getItem('username'),
+    html_score: score,
+  }).then(() => {
+    alert('Your Score is ' + score);
+    // window.location.href = '/src/HTML/home.html';
+  }
+  )
+});
 // }
 
-// // Event listeners
-// window.onload = function() {
-//   const addSignupForm = document.getElementById('signup-form');
-//   const loginButton = document.getElementById('login-button');
+// const leaderboardTable = document.getElementById("leaderboardTable");
 
-//   addSignupForm.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     signup();
-//   });
+// database.ref("leaderboard").orderByChild("score").on("value", function(snapshot) {
+//     const leaderboardData = [];
+//     snapshot.forEach(function(childSnapshot) {
+//         const entry = childSnapshot.val();
+//         leaderboardData.push(entry);
+//     });
+getDocs(colRef2)
+  .then((snapshot) => {
+    let leaderboardTable = []
+    snapshot.docs.forEach((doc) => {
+      leaderboardTable.push({ ...doc.data(),})
+    })
+    console.log(leaderboardTable)
+  })
 
-//   loginButton.addEventListener('click', login); // Handle login when the login button is clicked
-// };
+  .catch(err => {
+    console.log(err.message)
+  })
 
-=======
-const loginForm = document.querySelector('login-form');
-loginForm.addEventListener('submit', async (e) => {
-  e.preventDefault();
+leaderboardData.reverse(); // Reverse the data array to display in descending order by score
 
-  const username = loginForm.querySelector('input[name="username"]').value;
-  const password = loginForm.querySelector('input[name="password"]').value;
-
-  const querySnapshot = await getDocs(collection(db, 'Signup'));
-  const user = querySnapshot.docs.find((doc) => doc.data().username === username);
-
-  if (user && user.data().password === password) {
-    window.location.href = '/src/HTML/home.html';
-  } else {
-    alert('Invalid username or password. Please try again.');
-  }
+leaderboardData.forEach((entry, index) => {
+  const row = document.createElement("tr");
+  row.innerHTML = `<td>${index + 1}</td><td>${entry.name}</td><td>${entry.score}</td>`;
+  leaderboardTable.appendChild(row);
 });
->>>>>>> Stashed changes
+// });
