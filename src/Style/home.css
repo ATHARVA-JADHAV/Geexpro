@@ -112,6 +112,7 @@ body {
     text-align:center;
     color: white;
     width: 300px;
+    aspect-ratio: 16/9;
    
 }
 .w3-container1 img{

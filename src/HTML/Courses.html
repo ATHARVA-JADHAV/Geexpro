@@ -52,19 +52,17 @@
             >
           </li>
           <li
-            class="btn"
-            href="javascript:void(0);"
-            onclick="loadSignupPage();"
-          >
-            SignUp
+          class="btn"
+          href="javascript:void(0);"
+          id="Signupbutton"
+          onclick="loadSignupPage();"
+        >
+        </li>
+      
+            
           </li>
         </ul>
-        <script>
-          function loadHomePage() {
-          window.location.href = "home.html";
-}
-        </script>
-      </nav>
+      </nav>  
       <h1 class="desc-container" style="font-family:'Times New Roman', Times, serif; font-size: x-large; font-weight: 500;">Welcome to our Courses Webpage –your gateway to a world of knowledge and skill-building! At our online learning platform, we're dedicated to providing high-quality courses on a wide range of subjects, designed to empower learners of all levels. Whether you're a beginner looking to explore a new interest or a professional seeking to advance your career, our courses offer a path to growth, enrichment, and achievement.</h1>
     </div>
     <script>
@@ -281,11 +279,11 @@
       }</script>
       <script>
         function loadcoursesPage() {
-          window.location.href = "/src/HTML/index.html";
+          window.location.href = "/src/HTML/courses.html";
         }</script>
         <script>
           function loadLeaderPage() {
-            window.location.href = "/src/HTML/leaderbd.html";
+            window.location.href = "/dist/leaderbd.html";
           }</script>
           <script>
             function loadTestPage() {
@@ -293,11 +291,25 @@
             }</script>
             <script>
               function loadInternPage() {
-                window.location.href = "/src/HTML/Test.html";
+                window.location.href = "/src/HTML/internship.html";
               }</script>
               <script>
                 function loadSignupPage() {
                   window.location.href = "/dist/Signup 2.html";
                 }</script>
+    </body>
+  
+    
+      <script>
+    // Script to manipulate the button
+    var signupButton = document.getElementById("Signupbutton");
+    if (true) {
+      // Condition to check, replace with your own condition
+      signupButton.innerHTML = localStorage.getItem('username'); // Change the inner HTML of the button to "Name"
+    } else {
+      signupButton.innerHTML = "Value"; // Change the inner HTML of the button to "Value"
+    }
+  
+    </script>
   </body>
 </html>
