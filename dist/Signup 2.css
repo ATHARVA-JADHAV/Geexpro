@@ -1,5 +1,5 @@
 body {
-  background-image: url('wxw2.jpg');
+  background-image: url(/Images/wxw2.jpg);
   background-size: cover;
   font-family: Arial, sans-serif;
   margin: 0;
@@ -14,11 +14,11 @@ body {
 .container {
   
   padding: 20px 20px;
-
   text-align: center;
   border-radius: 10px;
   width: 80%;
   max-width: 400px;
+  aspect-ratio: 16/9;
 }
 
 .signup-heading {

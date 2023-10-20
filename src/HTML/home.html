@@ -138,6 +138,7 @@
         <div class="footer-top">
           <div>
             <h6 class="footer-title">Courses</h6>
+            <br>
             <ul class="footer-list">
               <li class="footer-list-item">
                 <a href="#" class="footer-list-link">About</a>
@@ -156,6 +157,7 @@
 
           <div>
             <h6 class="footer-title">Contact Us</h6>
+            <br>
             <ul class="footer-list">
               <li class="footer-list-item">
                 <a href="#" class="footer-list-link">instagram</a>
@@ -171,13 +173,14 @@
               </li>
               <li class="footer-list-item">
                 <a href="#" class="footer-list-link"
-                  >jadhavatharvaternaengg.ac.in</a
+                  >geexpro@gmail.com</a
                 >
               </li>
             </ul>
           </div>
           <div>
             <h6 class="footer-title">Learn more</h6>
+            <br>
             <ul class="footer-list">
               <li class="footer-list-item">
                 <a href="#" class="footer-list-link">About</a>
@@ -225,7 +228,7 @@
     }</script>
     <script>
       function loadcoursesPage() {
-        window.location.href = "/src/HTML/index.html";
+        window.location.href = "/src/HTML/courses.html";
       }</script>
       <script>
         function loadLeaderPage() {
@@ -251,11 +254,11 @@
   var signupButton = document.getElementById("Signupbutton");
   if (true) {
     // Condition to check, replace with your own condition
-    signupButton.innerHTML = "Name"; // Change the inner HTML of the button to "Name"
+    signupButton.innerHTML = localStorage.getItem('username'); // Change the inner HTML of the button to "Name"
   } else {
     signupButton.innerHTML = "Value"; // Change the inner HTML of the button to "Value"
   }
 
   </script>
-  <script></script>
+
 </html>
