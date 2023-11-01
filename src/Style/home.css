@@ -146,7 +146,7 @@ i {
     font-size: 1.4rem;
 }
 
-.footer {
+/* .footer {
     padding-block: 5rem;
 
     background-color: #0c0d0e;
@@ -235,6 +235,80 @@ i {
     font-size:45px;
     color: #cccdcd;
 }
+
+
+ */
+
+ .footer{
+  width: 1438px;
+  height: 350px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+#links{
+  margin-top: 40px;
+  margin-left: 50px;
+  font-size: 15px;
+}
+
+#address{
+  margin-top: 40px;
+  margin-left: 180px;
+  font-size: 15px;
+}
+
+#others{
+  margin-top: 40px;
+  margin-left: 150px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+#logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: -22px;
+  margin-top: 50px;
+}
+
+.newsletter{
+  margin-top: 40px;
+  margin-left: 260px;
+  font-size: 15px;
+}
+
+#email{
+  width: 250px;
+  height: 35px;
+  border: 1px solid;
+}
+
+#sub{
+  width: 250px;
+  height: 35px;
+  background-color:rgba(164, 165, 169, 0.3);
+  border: black;
+}
+
+.watermark{
+  font-size: 15px;
+  opacity: 20%;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
