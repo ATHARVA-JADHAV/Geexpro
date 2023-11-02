@@ -36,18 +36,78 @@ getDocs(colRef)
 
 console.log(localStorage.getItem('username'))
 
+const colRefHtmlScores = collection(db, 'html_quiz_scores');
+
+getDocs(colRefHtmlScores)
+  .then((snapshot) => {
+    let scores = [];
+    snapshot.docs.forEach((doc) => {
+      scores.push({ ...doc.data(), id: doc.id });
+    });
+
+    // Sort the scores array by the html_score field
+    scores.sort((a, b) => a.html_score - b.html_score);
+    scores.reverse();
+    console.log(scores);
+
+    const leaderboardTable = document.getElementById("leaderboardTable");
+
+    scores.forEach((entry, index) => {
+      const row = document.createElement("tr");
+      row.innerHTML = `<td>${index + 1}</td><td>${entry.username}</td><td>${entry.html_score}</td>`;
+      leaderboardTable.appendChild(row);
+    });
+  })
+  .catch((err) => {
+    console.log(err.message);
+  });
 
 
-window.onload = function signup() {
+// window.onload = function signup() {
+//   const addSignupForm = document.getElementById('signup-form');
+//   const password = document.getElementById('password');
+//   const conpassword = document.getElementById('conpassword');
+
+
+//   addSignupForm.addEventListener('submit', async (e) => {
+//     e.preventDefault();
+//     console.log("clicked")
+
+//     if (password.value === '' || conpassword.value === '') {
+//       alert('Please fill in both password fields');
+//       return;
+//     }
+
+//     if (password.value !== conpassword.value) {
+//       alert('Passwords do not match');
+//       return;
+//     }
+
+//     addDoc(colRef, {
+//       username: addSignupForm.username.value,
+//       email: addSignupForm.email.value,
+//       password: addSignupForm.password.value,
+//       conpass: addSignupForm.conpass.value,
+//     })
+//       .then(() => {
+//         console.log("Signup successful");
+//         // Redirect to the home page after successful signup
+//         window.location.href = "http://127.0.0.1:5501/src/HTML/home.html";
+//       })
+//       .catch((error) => {
+//         console.error('Error adding document: ', error);
+//       });
+
+//   });
+// }
+
+document.addEventListener('DOMContentLoaded', function () {
   const addSignupForm = document.getElementById('signup-form');
-
-
   const password = document.getElementById('password');
   const conpassword = document.getElementById('conpassword');
 
-
-  addSignupForm.addEventListener('submit', (e) => {
-    e.preventDefault();
+  addSignupForm.addEventListener('submit', async (e) => {
+    e.preventDefault(); // Prevent the default form submission
 
     if (password.value === '' || conpassword.value === '') {
       alert('Please fill in both password fields');
@@ -59,23 +119,26 @@ window.onload = function signup() {
       return;
     }
 
+    const colRef = collection(db, 'Signup');
+
     addDoc(colRef, {
-      username: addSignupForm.username.value,
-      email: addSignupForm.email.value,
-      password: addSignupForm.password.value,
-      conpass: addSignupForm.conpass.value,
+      username: addSignupForm.elements.username.value,
+      email: addSignupForm.elements.email.value,
+      password: addSignupForm.elements.password.value,
+      conpass: addSignupForm.elements.conpass.value,
     })
       .then(() => {
         console.log("Signup successful");
         // Redirect to the home page after successful signup
-        window.location.href = "http://127.0.0.1:5501/src/HTML/home.html";
+        window.location.href = "/src/HTML/home.html";
       })
       .catch((error) => {
         console.error('Error adding document: ', error);
       });
-
   });
-}
+});
+
+
 
 // const loginForm = document.getElementsByClassName('login-form');
 // loginForm.addEventListener('submit', async (e) => {
@@ -95,6 +158,49 @@ window.onload = function signup() {
 //   //   alert('Invalid username or password. Please try again.');
 //   // }
 // });
+
+// window.onload = function signup() {
+//   const addSignupForm = document.getElementById('signup-form');
+//   const signupButton = document.getElementById('signup-button');
+
+//   const password = document.getElementById('password');
+//   const conpassword = document.getElementById('conpassword');
+
+//   signupButton.addEventListener('click', function() {
+//     // Your code here
+//     console.log("clicked")
+//   });
+
+//   signupButton.addEventListener('click', () => {
+//     console.log("clicked")
+//     if (password.value === '' || conpassword.value === '') {
+//       alert('Please fill in both password fields');
+//       return;
+//     }
+
+//     if (password.value !== conpassword.value) {
+//       alert('Passwords do not match');
+//       return;
+//     }
+
+
+
+//     addDoc(colRef, {
+//       username: addSignupForm.username.value,
+//       email: addSignupForm.email.value,
+//       password: addSignupForm.password.value,
+//       conpass: addSignupForm.conpass.value,
+//     })
+//       .then(() => {
+//         console.log("Signup successful");
+//         // Redirect to the home page after successful signup
+//         window.location.href = "http://127.0.0.1:5501/src/HTML/home.html";
+//       })
+//       .catch((error) => {
+//         console.error('Error adding document: ', error);
+//       });
+//   });
+// };
 
 window.onload = function login() {
   const loginForm = document.getElementById('login-form');
@@ -248,7 +354,7 @@ getDocs(colRef2)
   .then((snapshot) => {
     let leaderboardTable = []
     snapshot.docs.forEach((doc) => {
-      leaderboardTable.push({ ...doc.data(),})
+      leaderboardTable.push({ ...doc.data(), })
     })
     console.log(leaderboardTable)
   })

@@ -12,19 +12,30 @@
     <section class="img1">
         <div class="header">
             <nav>
-                <img src="/Images/logo.png" alt="logo" width="200px" height="100px" />
+                <img src="/Images/logo.png" alt="logo" width="200px" height="100px" href="javascript:void(0);"
+                  onclick="loadHomePage();" class="mr-5 hover:text-gray-900" />
                 <ul class="nav-links">
-                    <li><a href="">Learn</a></li>
-                    <li><a href="">Practice</a></li>
-                    <li><a href="">Mentorship</a></li>
-                    <li><a href="">Compete</a></li>
-                    <li class="btn">SignUp</li>
+                  <li>
+                    <a href="javascript:void(0);" onclick="loadcoursesPage();" class="mr-5 hover:text-gray-900">Learn</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" onclick="loadTestPage();" class="mr-5 hover:text-gray-900">Compete</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" onclick="loadLeaderPage();" class="mr-5 hover:text-gray-900">Leaderboard</a>
+                  </li>
+                  <li>
+                    <a href="javascript:void(0);" onclick="loadInternPage();" class="mr-5 hover:text-gray-900">Internship</a>
+                  </li>
+                  <li class="btn" href="javascript:void(0);" id="Signupbutton" onclick="loadSignupPage();">
+                  </li>
                 </ul>
-            </nav>
+              </nav>
         </div>
         <div class="title">
             <h1>Jobs & Internships.</h1>
-            <h3>Apply to a plethora of hiring opportunities</h3><h4>& work with your dream companies!</h4>
+            <h3>Apply to a plethora of hiring opportunities</h3>
+            <h4>& work with your dream companies!</h4>
         </div>
         <div id="internship-list">
             <!-- Internship cards will be dynamically generated here -->
@@ -32,6 +43,43 @@
     </section>
 
     <script src="/src/internship.js"></script>
+
+    <script>
+        function loadHomePage() {
+            window.location.href = "/src/HTML/home.html";
+        }</script>
+    <script>
+        function loadcoursesPage() {
+            window.location.href = "/src/HTML/courses.html";
+        }</script>
+    <script>
+        function loadLeaderPage() {
+            window.location.href = "/dist/leaderbd.html";
+        }</script>
+    <script>
+        function loadTestPage() {
+            window.location.href = "/src/HTML/Test.html";
+        }</script>
+    <script>
+        function loadInternPage() {
+            window.location.href = "/src/HTML/internship.html";
+        }</script>
+    <script>
+        function loadSignupPage() {
+            window.location.href = "/dist/Signup 2.html";
+        }</script>
+
+<script>
+    // Script to manipulate the button
+    var signupButton = document.getElementById("Signupbutton");
+    if (true) {
+      // Condition to check, replace with your own condition
+      signupButton.innerHTML = localStorage.getItem('username'); // Change the inner HTML of the button to "Name"
+    } else {
+      signupButton.innerHTML = "Value"; // Change the inner HTML of the button to "Value"
+    }
+  
+  </script>
 </body>
 
 </html>

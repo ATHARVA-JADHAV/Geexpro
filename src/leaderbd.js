@@ -1,20 +1,41 @@
+import { initializeApp } from 'firebase/app'
+import {
+  getFirestore, collection, getDocs,
+  addDoc,
+} from 'firebase/firestore'
+
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    databaseURL: "YOUR_DATABASE_URL",
-    projectId: "YOUR_PROJECT_ID",
-    storageBucket: "YOUR_STORAGE_BUCKET",
-    messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-    appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyDov4cuzedD7XlwtoAwZFmig3JfGuj6COQ",
+  authDomain: "fir-9-geexpro.firebaseapp.com",
+  projectId: "fir-9-geexpro",
+  storageBucket: "fir-9-geexpro.appspot.com",
+  messagingSenderId: "194567428232",
+  appId: "1:194567428232:web:df62437660fa29ec92673d",
+  measurementId: "G-B2C805E45M"
 };
 
-firebase.initializeApp(firebaseConfig);
+initializeApp(firebaseConfig)
 
-const database = firebase.database();
+const db = getFirestore()
+
+const colRefScores= collection(db, 'html_quiz_scores')
+
+getDocs(colRefScores)
+  .then((snapshot) => {
+    let scores = []
+    snapshot.docs.forEach((doc) => {
+      scores.push({ ...doc.data(), id: doc.id })
+    })
+    console.log(scores)
+  })
+
+  .catch(err => {
+    console.log(err.message)
+  })
 
 const leaderboardTable = document.getElementById("leaderboardTable");
-
-database.ref("leaderboard").orderByChild("score").on("value", function(snapshot) {
+console.log("leaderboardTable");
+db.ref("leaderboard").orderByChild("score").on("value", function(snapshot) {
     const leaderboardData = [];
     snapshot.forEach(function(childSnapshot) {
         const entry = childSnapshot.val();

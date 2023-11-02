@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Python Test</title>
-  <link href="/src/Style/pythontest.css" rel="stylesheet" type="text/css" />
+  <link href="/dist/pythontest.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -16,27 +16,28 @@
           onclick="loadHomePage();" class="mr-5 hover:text-gray-900" />
         <ul class="nav-links">
           <li>
-            <a href="javascript:void(0);" onclick="loadPythonTest();" class="mr-5 hover:text-gray-900"></a>
+            <a href="javascript:void(0);" onclick="loadcoursesPage();" class="mr-5 hover:text-gray-900">Learn</a>
           </li>
           <li>
-            <a href="javascript:void(0);" onclick="loadTestPage();" class="mr-5 hover:text-gray-900">Practice</a>
+            <a href="javascript:void(0);" onclick="loadTestPage();" class="mr-5 hover:text-gray-900">Compete</a>
           </li>
           <li>
-            <a href="javascript:void(0);" onclick="location.href='/test.html'"
-              class="mr-5 hover:text-gray-900">Compete</a>
+            <a href="javascript:void(0);" onclick="loadLeaderPage();" class="mr-5 hover:text-gray-900">Leaderboard</a>
           </li>
           <li>
-            <a href="javascript:void(0);" onclick="loadTestPage();" class="mr-5 hover:text-gray-900">Mentorship</a>
+            <a href="javascript:void(0);" onclick="loadInternPage();" class="mr-5 hover:text-gray-900">Internship</a>
           </li>
-          <li class="btn" href="javascript:void(0);" onclick="loadSignupPage();">
-            SignUp
+          <li class="btn" href="javascript:void(0);" id="Signupbutton" onclick="loadSignupPage();">
+          </li>
+  
+  
           </li>
         </ul>
       </nav>
     </div>
 
     <div class="questions">
-      <h2 class="heading">Python</h2>
+      <h2 class="headin">Python</h2>
 
       <form class="form" id="quizform">
         <div id="question1">
