@@ -36,31 +36,31 @@ getDocs(colRef)
 
 console.log(localStorage.getItem('username'))
 
-const colRefHtmlScores = collection(db, 'html_quiz_scores');
+// const colRefHtmlScores = collection(db, 'html_quiz_scores');
 
-getDocs(colRefHtmlScores)
-  .then((snapshot) => {
-    let scores = [];
-    snapshot.docs.forEach((doc) => {
-      scores.push({ ...doc.data(), id: doc.id });
-    });
+// getDocs(colRefHtmlScores)
+//   .then((snapshot) => {
+//     let scores = [];
+//     snapshot.docs.forEach((doc) => {
+//       scores.push({ ...doc.data(), id: doc.id });
+//     });
 
-    // Sort the scores array by the html_score field
-    scores.sort((a, b) => a.html_score - b.html_score);
-    scores.reverse();
-    console.log(scores);
+//     // Sort the scores array by the html_score field
+//     scores.sort((a, b) => a.html_score - b.html_score);
+//     scores.reverse();
+//     console.log(scores);
 
-    const leaderboardTable = document.getElementById("leaderboardTable");
+//     const leaderboardTable = document.getElementById("leaderboardTable");
 
-    scores.forEach((entry, index) => {
-      const row = document.createElement("tr");
-      row.innerHTML = `<td>${index + 1}</td><td>${entry.username}</td><td>${entry.html_score}</td>`;
-      leaderboardTable.appendChild(row);
-    });
-  })
-  .catch((err) => {
-    console.log(err.message);
-  });
+//     scores.forEach((entry, index) => {
+//       const row = document.createElement("tr");
+//       row.innerHTML = `<td>${index + 1}</td><td>${entry.username}</td><td>${entry.html_score}</td>`;
+//       leaderboardTable.appendChild(row);
+//     });
+//   })
+//   .catch((err) => {
+//     console.log(err.message);
+//   });
 
 
 // window.onload = function signup() {
@@ -230,10 +230,10 @@ window.onload = function login() {
 }
 
 // function HtmlTestScore() {
-const chootad = document
-  .getElementById("quizform");
+const html_score = document
+  .getElementById("htmlquizform");
 
-chootad?.addEventListener("submit", function (e) {
+html_score.addEventListener("submit", function (e) {
   e.preventDefault(); // Prevent the form from submitting
   let score = 0;
 
@@ -371,3 +371,113 @@ leaderboardData.forEach((entry, index) => {
   leaderboardTable.appendChild(row);
 });
 // });
+
+
+const js_score = document
+  .getElementById("jsquizform");
+
+js_score.addEventListener("submit", function (e) {
+  e.preventDefault(); // Prevent the form from submitting
+  let score = 0;
+
+  // Check answers for question 1
+  if (document.getElementById("q1-option1").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 2
+  if (document.getElementById("q2-option1").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 3
+  if (document.getElementById("q3-option2").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 4
+  if (document.getElementById("q4-option2").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 5
+  if (document.getElementById("q5-option1").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 6
+  if (document.getElementById("q6-option2").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 7
+  if (document.getElementById("q7-option3").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 8
+  if (document.getElementById("q8-option1").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 9
+  if (document.getElementById("q9-option2").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 10
+  if (document.getElementById("q10-option1").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 11
+  if (document.getElementById("q11-option3").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 12
+  if (document.getElementById("q12-option3").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 13
+  if (document.getElementById("q13-option1").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 14
+  if (document.getElementById("q14-option3").checked) {
+    score += 4;
+  }
+
+  // Check answers for question 15
+  if (document.getElementById("q15-option2").checked) {
+    score += 4;
+  }
+
+  // Display the score
+  console.log(score);
+
+  const colRef3 = collection(db, 'js_quiz_scores')
+
+  getDocs(colRef3)
+    .then((snapshot) => {
+      let js_quiz_scores = []
+      snapshot.docs.forEach((doc) => {
+        js_quiz_scores.push({ ...doc.data(), id: doc.id })
+      })
+      console.log(js_quiz_scores)
+    })
+
+    .catch(err => {
+      console.log(err.message)
+    })
+
+  addDoc(colRef3, {
+    username: localStorage.getItem('username'),
+    js_score: score,
+  }).then(() => {
+    alert('Your Score is ' + score);
+  }
+  )
+});

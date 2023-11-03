@@ -12,57 +12,25 @@
   <div class="main">
     <div class="header">
       <nav>
-        <img
-          src="/Images/logo.png"
-          alt="logo"
-          width="200px"
-          height="100px"
-          href="javascript:void(0);"
-          onclick="loadHomePage();"
-          class="mr-5 hover:text-gray-900"
-        />
+        <img src="/Images/logo.png" alt="logo" width="200px" height="100px" href="javascript:void(0);"
+          onclick="loadHomePage();" class="mr-5 hover:text-gray-900" />
         <ul class="nav-links">
           <li>
-            <a
-              href="javascript:void(0);"
-              onclick="loadcoursesPage();"
-              class="mr-5 hover:text-gray-900"
-              >Learn</a
-            >
+            <a href="javascript:void(0);" onclick="loadcoursesPage();" class="mr-5 hover:text-gray-900">Learn</a>
           </li>
           <li>
-            <a
-              href="javascript:void(0);"
-              onclick="loadTestPage();"
-              class="mr-5 hover:text-gray-900"
-              >Compete</a
-            >
+            <a href="javascript:void(0);" onclick="loadTestPage();" class="mr-5 hover:text-gray-900">Compete</a>
           </li>
           <li>
-            <a
-              href="javascript:void(0);"
-              onclick="loadLeaderPage();"
-              class="mr-5 hover:text-gray-900"
-              >Leaderboard</a
-            >
+            <a href="javascript:void(0);" onclick="loadLeaderPage();" class="mr-5 hover:text-gray-900">Leaderboard</a>
           </li>
           <li>
-            <a
-              href="javascript:void(0);"
-              onclick="loadInternPage();"
-              class="mr-5 hover:text-gray-900"
-              >Internship</a
-            >
+            <a href="javascript:void(0);" onclick="loadInternPage();" class="mr-5 hover:text-gray-900">Internship</a>
           </li>
-          <li
-          class="btn"
-          href="javascript:void(0);"
-          id="Signupbutton"
-          onclick="loadSignupPage();"
-        >
-        </li>
-      
-            
+          <li class="btn" href="javascript:void(0);" id="Signupbutton" onclick="loadSignupPage();">
+          </li>
+
+
           </li>
         </ul>
       </nav>
@@ -71,7 +39,7 @@
     <div class="questions">
       <h2 class="headin">Javascript</h2>
 
-      <form class="form" id="quizform">
+      <form class="form" id="jsquizform">
         <div id="question1">
           <p>1. What is JavaScript?</p>
           <input type="radio" id="q1-option1" name="q1" value="A" />
@@ -121,7 +89,7 @@
           <p>
             4. What will be the output of the following JavaScript code
             snippet?<br />
-            <pre>
+          <pre>
               <code>
               &lt;p id="demo"&gt;&lt;/p&gt;
               </code>
@@ -429,96 +397,10 @@
     </div>
   </footer>
 
-  <script>
-    document
-      .getElementById("quizform")
-      .addEventListener("submit", function (e) {
-        e.preventDefault(); // Prevent the form from submitting
-        let score = 0;
-
-        // Check answers for question 1
-        if (document.getElementById("q1-option1").checked) {
-          score += 4;
-        }
-
-        // Check answers for question 2
-        if (document.getElementById("q2-option1").checked) {
-          score += 4;
-        }
-
-        // Check answers for question 3
-        if (document.getElementById("q3-option2").checked) {
-          score += 4;
-        }
-
-        // Check answers for question 4
-        if (document.getElementById("q4-option2").checked) {
-          score += 4;
-        }
-
-        // Check answers for question 5
-        if (document.getElementById("q5-option1").checked) {
-          score += 4;
-        }
-
-        // Check answers for question 6
-        if (document.getElementById("q6-option2").checked) {
-          score += 4;
-        }
-
-        // Check answers for question 7
-        if (document.getElementById("q7-option3").checked) {
-          score += 4;
-        }
-
-        // Check answers for question 8
-        if (document.getElementById("q8-option1").checked) {
-          score += 4;
-        }
-
-        // Check answers for question 9
-        if (document.getElementById("q9-option2").checked) {
-          score += 4;
-        }
-
-        // Check answers for question 10
-        if (document.getElementById("q10-option1").checked) {
-          score += 4;
-        }
-
-        // Check answers for question 11
-        if (document.getElementById("q11-option3").checked) {
-          score += 4;
-        }
-
-        // Check answers for question 12
-        if (document.getElementById("q12-option3").checked) {
-          score += 4;
-        }
-
-        // Check answers for question 13
-        if (document.getElementById("q13-option1").checked) {
-          score += 4;
-        }
-
-        // Check answers for question 14
-        if (document.getElementById("q14-option3").checked) {
-          score += 4;
-        }
-
-        // Check answers for question 15
-        if (document.getElementById("q15-option2").checked) {
-          score += 4;
-        }
-
-        // Display the score
-        alert("Your score is: " + score);
-      });
-  </script>
-
   <script src="bundle.js"></script>
 
-  <script type="module" src="/src/testhtml.js"></script>
+  <script type="module" src="/src/index.js"></script>
+
   <script>
     function loadHomePage() {
       window.location.href = "/src/HTML/home.html";

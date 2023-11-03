@@ -1,9 +1,8 @@
-<!DOCTYPE html>
 <html>
 
 <head>
-  <title>Leaderboard</title>
-  <link rel="stylesheet" type="text/css" href="/dist/leaderbd.css" />
+  <title>COMPETE</title>
+  <link href="/dist/leaderbd.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -24,7 +23,7 @@
         <li>
           <a href="javascript:void(0);" onclick="loadInternPage();" class="mr-5 hover:text-gray-900">Internship</a>
         </li>
-        <li class="btn" href="javascript:void(0);" id="Signupbutton" onclick="loadSignupPage();">
+        <li class="btn" href="javascript:void(0);" id="Signupbutton" onclick="loadSignupPage();" style="width: 50px;">
         </li>
       </ul>
     </nav>
@@ -44,149 +43,221 @@
       window.location.href = "test.html";
     }
   </script>
-  </header>
+  <script>
+    function loadcoursesPage() {
+      window.location.href = "courses.html";
+    }
+  </script>
+<div class="leadcon">
+  <div class="container">
+    <h1 style="color: rgb(19, 18, 17);">Leaderboard</h1>
+    <br />
+    
+    <p style="background-image: url('/Images/wxw2.jpg')"></p>
+    <p style="width: 750PX; line-height: 25px; font-size: x-large; color: rgb(19, 18, 17); ">
+      At GEEXPRO, we're committed to making learning enjoyable and effective. <br>Our leaderboards are a testament to that commitment, as they introduce an element of competition and motivation that can transform the way you learn. 
+    </p>
+    <br />
+    <p style="font-size: x-large;color: rgb(19, 18, 17);">
+      Test yourself to check where you stand in the race.
+    </p>
   </div>
-  <div class="leaderboard">
-    <h1>Leaderboard</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>Rank</th>
-          <th>Name</th>
-          <th>Score</th>
-        </tr>
-      </thead>
-      <tbody id="leaderboardTable">
-        <!-- Leaderboard data will be inserted here using JavaScript -->
-      </tbody>
-    </table>
   </div>
-  <script src="https://www.gstatic.com/firebasejs/9.6.5/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/9.6.5/firebase-database.js"></script>
-  <script src="leaderbd.js"></script>
+  <div class="test_container">
+    <div class="w3-container">
+      <p class="bruh">
+        <b style="width: 180PX; padding-left: 0px;">Click the icon below for HTML leaderboard</b>
+        <img src="/SVGs/html.svg" class="logoz" alt="course1" height="80px" width="170px"onclick="htmlleaderboard();"
+          style="size: 180px;; padding-right: 0px;" />
+        
+      </p>
+    </div>
+    <div class="w3-container">
+      <p class="bruh">
+        <b>Click the icon below for JAVASCRIPT leaderboard</b>
+        <img src="/SVGs/JS.svg" class="logoz" alt="course1" height="80px" width="180px"onclick="testjs();"
+          style="position: initial; right: 200px;padding-left: 20px" />
+        
+      </p>
+    </div>
+    <div class="w3-container">
+      <p class="bruh">
+        <b style="width: 180PX; padding-left: 0px;">Click the icon below for REACT leaderboard</b>
+        <img src="/SVGs/react.svg" class="logoz" alt="course1" height="80px" width="180px"onclick="testreact();"
+          style="position: initial; right: 200px" />
+        
+      </p>
+    </div>
+  </div>
 
-  <div>
-    <footer class="footer">
-      <div class="footer-container">
-        <div class="footer-top">
-          <div>
-            <h6 class="footer-title">Courses</h6>
-            <ul class="footer-list">
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-link">About</a>
-              </li>
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-link">Careers</a>
-              </li>
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-link">Affiliates</a>
-              </li>
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-link">Sitemap</a>
-              </li>
-            </ul>
-          </div>
-          <div>
-            <h6 class="footer-title">Contact Us</h6>
-            <ul class="footer-list">
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-link">Instagram</a>
-              </li>
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-link">Twitter</a>
-              </li>
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-link">Linked-in</a>
-              </li>
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-link">Facebook</a>
-              </li>
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-link">jadhavatharvaternaengg.ac.in</a>
-              </li>
-            </ul>
-          </div>
+  <div class="zest_container">
+    <div class="w3-container">
+      <p class="bruh">
+        <b style="width: 170PX; padding-left: 0px;">Click the icon below for JAVA leaderboard</b>
+        <img src="/SVGs/java.svg" class="logoz" alt="course1" height="80px" width="180px"onclick="testreact();"
+          style="position: initial; right: 200px" />
+      
+      </p>
+    </div>
+    <div class="w3-container">
+      <p class="bruh">
+        <b>Click the icon below for PYTHON leaderboard</b>
+        <img src="/SVGs/python.svg" class="logoz" alt="course1" height="80px" width="180px" onclick="testreact();"
+          style="position: initial; right: 200px" />
+        
+      </p>
+    </div>
+    <div class="w3-container">
+      <p class="bruh">
+        <b style="width: 180PX; padding-left: 30px;">Click the icon below for DJANGO leaderboard</b>
+        <img src="/SVGs/django.svg" class="logoz" alt="course1" height="80px" width="200px"onclick="testreact();"
+          style="position: initial; right: 200px" />
+        
+      </p>
+    </div>
+  </div>
+  <script>
+    function loadLearnPage() {
+      window.location.href = "Courses.html";
+    }
+  </script>
 
-          <div>
-            <h6 class="footer-title">Learn more</h6>
-            <ul class="footer-list">
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-link">About</a>
-              </li>
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-link">Careers</a>
-              </li>
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-link">Affiliates</a>
-              </li>
-              <li class="footer-list-item">
-                <a href="#" class="footer-list-link">Sitemap</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+  <script>
+    function loadSignupPage() {
+      window.location.href = "Signup.html";
+    }
+  </script>
 
-        <hr class="footer-divider" />
-
-        <div class="footer-bottom">
-          <span class="copyright">&copy; GEEXPRO. All rights reserved.</span>
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-top">
+        <div>
+          <h6 class="footer-title">Courses</h6>
           <ul class="footer-list">
             <li class="footer-list-item">
-              <a href="#" class="footer-list-link">
-                <i class="ri-facebook-circle-line"></i>
-              </a>
+              <a href="#" class="footer-list-link"><br />About</a>
             </li>
             <li class="footer-list-item">
-              <a href="#" class="footer-list-link">
-                <i class="ri-instagram-line"></i>
-              </a>
+              <a href="#" class="footer-list-link">Careers</a>
             </li>
             <li class="footer-list-item">
-              <a href="#" class="footer-list-link">
-                <i class="ri-twitter-line"></i>
-              </a>
+              <a href="#" class="footer-list-link">Affiliates</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="#" class="footer-list-link">Sitemap</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <h6 class="footer-title">Contact Us</h6>
+          <ul class="footer-list">
+            <li class="footer-list-item">
+              <a href="#" class="footer-list-link"></a>
+            </li>
+            <li class="footer-list-item">
+              <a href="#" class="footer-list-link">Instagram</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="#" class="footer-list-link">Linked-in</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="#" class="footer-list-link">Facebook</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="#" class="footer-list-link">jadhavatharvaternaengg.ac.in</a>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h6 class="footer-title">Learn more</h6>
+          <ul class="footer-list">
+            <li class="footer-list-item">
+              <a href="#" class="footer-list-link"><br />About</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="#" class="footer-list-link">Careers</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="#" class="footer-list-link">Affiliates</a>
+            </li>
+            <li class="footer-list-item">
+              <a href="#" class="footer-list-link">Sitemap</a>
             </li>
           </ul>
         </div>
       </div>
-    </footer>
-  </div>
-  <script src="bundle.js"></script>
-  <script type="module" src="/src/index.js"></script>
+
+      <hr class="footer-divider" />
+
+      <div class="footer-bottom">
+        <span class="copyright">&copy; GEEXPRO. All rights reserved.</span>
+        <ul class="footer-list">
+          <li class="footer-list-item">
+            <a href="#" class="footer-list-link">
+              <i class="ri-facebook-circle-line"></i>
+            </a>
+          </li>
+          <li class="footer-list-item">
+            <a href="#" class="footer-list-link">
+              <i class="ri-instagram-line"></i>
+            </a>
+          </li>
+          <li class="footer-list-item">
+            <a href="#" class="footer-list-link">
+              <i class="ri-twitter-line"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </footer>
   <script>
     function loadHomePage() {
       window.location.href = "/src/HTML/home.html";
-    }</script>
-  <script>
+    }
     function loadcoursesPage() {
       window.location.href = "/src/HTML/courses.html";
-    }</script>
-  <script>
+    }
     function loadLeaderPage() {
       window.location.href = "/dist/leaderbd.html";
-    }</script>
-  <script>
+    }
     function loadTestPage() {
       window.location.href = "/src/HTML/Test.html";
-    }</script>
-  <script>
+    }
     function loadInternPage() {
       window.location.href = "/src/HTML/internship.html";
-    }</script>
-  <script>
+    }
     function loadSignupPage() {
       window.location.href = "/dist/Signup 2.html";
-    }</script>
-
-  <script>
-    var signupButton = document.getElementById("Signupbutton");
-    if (true) {
-      signupButton.innerHTML = localStorage.getItem('username');
-    } else {
-      signupButton.innerHTML = "Value";
     }
-
+    function testhtml() {
+      window.location.href = "/dist/testhtml.html";
+    }
+    function testjs() {
+      window.location.href = "/dist/testjs.html";
+    }
+    function testpython() {
+      window.location.href = "/dist/pythontest.html";
+    }
+    function htmlleaderboard() {
+      window.location.href = "/dist/htmlleaderbd.html";s
+    }
   </script>
+</body>
+
+
+<script>
+  // Script to manipulate the button
+  var signupButton = document.getElementById("Signupbutton");
+  if (true) {
+    // Condition to check, replace with your own condition
+    signupButton.innerHTML = localStorage.getItem('username'); // Change the inner HTML of the button to "Name"
+  } else {
+    signupButton.innerHTML = "Value"; // Change the inner HTML of the button to "Value"
+  }
+
+</script>
 </body>
 
 </html>
