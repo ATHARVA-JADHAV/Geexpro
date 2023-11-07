@@ -31,11 +31,11 @@
         </div>
 
         <div class="inputbox">
-          <button type="submit" id="signup-button">Sign Up</button>
+          <button type="submit" id="signup-button" onclick="loadhomepage();">Sign Up</button>
         </div>
       </form>
       <p class="already">
-        Already have an account? <a href="/dist/Login.html">Log in</a>
+        Already have an account? <a href="/dist/Login.html" style="color: white; text-decoration: none;">Log in</a>
       </p>
     </div>
 
@@ -49,6 +49,12 @@
       window.location.href = "index.html";
     }
   </script> -->
+
+  <script>
+    function loadHomePage() {
+      window.location.href = "/src/HTML/home.html";
+    }
+  </script>
 
   <script type="module" src="/src/index.js"></script>
 </body>

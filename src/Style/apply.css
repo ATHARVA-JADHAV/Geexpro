@@ -1,11 +1,8 @@
 * {
-    margin: 0;
-    padding: 0;
-    font-family: "poppins", sans-serif;
-    box-sizing: border-box;
-  }
-body {
-    font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  font-family: fantasy UI;
+  box-sizing: border-box;
 }
 
 header {
@@ -75,7 +72,7 @@ form input[type="submit"]:hover {
     height: 80px;
 }
 
-nav {
+/* nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -125,7 +122,7 @@ nav {
     padding: 10px 30px;
     border-radius: 3px;
     cursor: pointer;
-}
+} */
 /* .img1{
     background-image: url("wxw2.jpg");    
     background-repeat: no-repeat;
@@ -136,3 +133,115 @@ html{
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    width: 10px;
+    height: 10px;
+    color: black;
+    background-color: black;
+  }
+  .nav-links {
+    padding: 28px 0;
+  }
+  .nav-links li {
+    display: inline-block;
+    margin: 0 15px;
+  }
+  .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 5px 0;
+    position: relative;
+  }
+  .nav-links li a::after {
+    content: "";
+    background: #FD6262;
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+  }
+  .nav-links li a:hover::after {
+    width: 100%;
+  }
+  .btn {
+    background: #a8aab0;
+    color: #fff;
+    padding: 10px 30px;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  .btn:hover{
+    background-color: #fdba62;
+    color: #0c0d0e;
+    transition: all 0.5s ease 0s;
+    opacity: 0.8;
+  }
+
+  .footer{
+    width: 1438px;
+    height: 350px;
+    background-color: rgb(14, 13, 13);
+    color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+#links{
+    margin-top: 40px;
+    margin-left: 50px;
+    font-size: 15px;
+}
+
+#address{
+    margin-top: 40px;
+    margin-left: 180px;
+    font-size: 15px;
+}
+
+#others{
+    margin-top: 40px;
+    margin-left: 150px;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#logo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: -22px;
+    margin-top: 50px;
+}
+
+.newsletter{
+    margin-top: 40px;
+    margin-left: 260px;
+    font-size: 15px;
+}
+
+#email{
+    width: 250px;
+    height: 35px;
+    border: 1px solid;
+}
+
+#sub{
+    width: 250px;
+    height: 35px;
+    background-color:rgba(164, 165, 169, 0.3);
+    border: black;
+}
+
+.watermark{
+    font-size: 15px;
+    opacity: 20%;
+}

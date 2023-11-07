@@ -29,9 +29,6 @@
           </li>
           <li class="btn" href="javascript:void(0);" id="Signupbutton" onclick="loadSignupPage();">
           </li>
-  
-  
-          </li>
         </ul>
       </nav>
     </div>
@@ -39,7 +36,7 @@
     <div class="questions">
       <h2 class="headin">Python</h2>
 
-      <form class="form" id="quizform">
+      <form class="form" id="pythonquizform">
         <div id="question1">
           <p>1. What is the output of the following code snippet?</p>
           <pre>
@@ -262,97 +259,94 @@
         </div>
         <br>
 
-        <input type="submit" value="Submit" id="submit" class="submit-button" />
+        <input type="submit" value="Submit Test" class="button">
       </form>
     </div>
   </div>
 </body>
-<footer class="footer">
-  <div class="footer-container">
-    <div class="footer-top">
-      <div>
-        <h6 class="footer-title">Courses</h6>
-        <ul class="footer-list">
-          <li class="footer-list-item">
-            <a href="#" class="footer-list-link"><br />About</a>
-          </li>
-          <li class="footer-list-item">
-            <a href="#" class="footer-list-link">Careers</a>
-          </li>
-          <li class="footer-list-item">
-            <a href="#" class="footer-list-link">Affiliates</a>
-          </li>
-          <li class="footer-list-item">
-            <a href="#" class="footer-list-link">Sitemap</a>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <h6 class="footer-title">Contact Us</h6>
-        <ul class="footer-list">
-          <li class="footer-list-item">
-            <a href="#" class="footer-list-link"><br />
-              <img src="imgs/instagram.svg" alt="course1" height="30px" width="40px"
-                style="position: initial; right: 200px" /></a>
-          </li>
-          <li class="footer-list-item">
-            <a href="#" class="footer-list-link"><img src="imgs/twitter.svg" alt="course1" height="30px" width="40px"
-                style="position: initial; right: 200px" /></a>
-          </li>
-          <li class="footer-list-item">
-            <a href="#" class="footer-list-link">Linked-in</a>
-          </li>
-          <li class="footer-list-item">
-            <a href="#" class="footer-list-link">Facebook</a>
-          </li>
-          <li class="footer-list-item">
-            <a href="#" class="footer-list-link">jadhavatharvaternaengg.ac.in</a>
-          </li>
-        </ul>
-      </div>
+<footer>
+  <div class="footer">
+    <div id="links">
+      <a href="javascript:void(0)" style="color:white; text-decoration: none;" onclick="loadHomePage();"> Home
+      </a><br><br>
+      <a href="javascript:void(0)" style="color:white; text-decoration: none;" onclick="loadcoursesPage();">
+        Learn</a><br><br>
+      <a href="javascript:void(0)" style="color:white; text-decoration: none;" onclick="loadTestPage();"> Compete
+      </a><br><br>
+      <a href="javascript:void(0)" style="color:white; text-decoration: none;" onclick="loadLeaderPage();"> Leaderboard
+      </a> <br><br>
+      <a href="javascript:void(0)" style="color:white; text-decoration: none;" onclick="loadInternPage();"> Internships
+      </a>
+    </div>
+    <div id="address">
+      500 Terry Francine St. <br><br>
+      San Francisco, CA 94158 <br><br><br><br>
+      Email : info@geexpro .com <br><br>
+      Tel : 1-800-000-0000
+    </div>
 
-      <div>
-        <h6 class="footer-title">Learn more</h6>
-        <ul class="footer-list">
-          <li class="footer-list-item">
-            <a href="#" class="footer-list-link"><br />About</a>
-          </li>
-          <li class="footer-list-item">
-            <a href="#" class="footer-list-link">Careers</a>
-          </li>
-          <li class="footer-list-item">
-            <a href="#" class="footer-list-link">Affiliates</a>
-          </li>
-          <li class="footer-list-item">
-            <a href="#" class="footer-list-link">Sitemap</a>
-          </li>
-        </ul>
+    <div id="others">
+      <div id="faq">
+        About Us <br><br>
+        FAQ
       </div>
     </div>
 
-    <hr class="footer-divider" />
-
-    <div class="footer-bottom">
-      <span class="copyright">&copy; GEEXPRO. All rights reserved.</span>
-      <ul class="footer-list">
-        <li class="footer-list-item">
-          <a href="#" class="footer-list-link">
-            <i class="ri-facebook-circle-line"></i>
-          </a>
-        </li>
-        <li class="footer-list-item">
-          <a href="#" class="footer-list-link">
-            <i class="ri-instagram-line"></i>
-          </a>
-        </li>
-        <li class="footer-list-item">
-          <a href="#" class="footer-list-link">
-            <i class="ri-twitter-line"></i>
-          </a>
-        </li>
-      </ul>
+    <div class="newsletter">
+      Recieve all our news and updates <br>
+      <form>
+        <label for="email"></label><br>
+        <input type="email" id="email" name="email" placeholder=" Email Address*" required><br><br>
+        <input type="submit" value="Subscribe Now" id="sub">
+      </form>
+      <br><br><br>
+      <div class="watermark">
+        <img src="./copyright-regular.svg" alt="">2023 by Geexpro <br> All rights reserved.
+      </div>
     </div>
+
   </div>
 </footer>
+
+<script>
+  // Script to manipulate the button
+  var signupButton = document.getElementById("Signupbutton");
+  if (true) {
+    // Condition to check, replace with your own condition
+    signupButton.innerHTML = localStorage.getItem('username'); // Change the inner HTML of the button to "Name"
+  } else {
+    signupButton.innerHTML = "Value"; // Change the inner HTML of the button to "Value"
+  }
+
+</script>
+
+<script>
+  function loadHomePage() {
+    window.location.href = "/src/HTML/home.html";
+  }</script>
+<script>
+  function loadcoursesPage() {
+    window.location.href = "/src/HTML/index.html";
+  }</script>
+<script>
+  function loadLeaderPage() {
+    window.location.href = "/dist/leaderbd.html";
+  }</script>
+<script>
+  function loadTestPage() {
+    window.location.href = "/src/HTML/Test.html";
+  }</script>
+<script>
+  function loadInternPage() {
+    window.location.href = "/src/HTML/Test.html";
+  }</script>
+<script>
+  function loadSignupPage() {
+    window.location.href = "/dist/Signup.html";
+  }</script>
+
+<script src="bundle.js"></script>
+
+<script type="module" src="/src/index.js"></script>
 
 </html>

@@ -22,8 +22,8 @@ function displayInternships() {
 
     card.innerHTML = `
       <h2>${internship.title}</h2>
-      <p><strong>Company:</strong> ${internship.company}</p>
-      <p><strong>Location:</strong> ${internship.location}</p>
+      <p><strong>Company:</strong>  ${internship.company}</p>
+      <p><strong>Location: </strong>  ${internship.location}</p>
       <p><strong>Duration:</strong> ${internship.duration}</p>
     `;
 

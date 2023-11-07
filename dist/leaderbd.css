@@ -73,7 +73,7 @@ nav {
 }
 body {
   background-color: rgb(20, 20, 22);
-  background-image: url("/Images/wxw4th.jpg");
+  background-image: url("/Images/wxw2.jpg");
   background-size: 100% 100%;
   background-repeat: inherit;
 }
@@ -81,7 +81,7 @@ body {
 
   display: flex;
   text-align: center;
-  border-radius: 5%;
+  border-radius: 4%;
   margin-top: 3%;
   margin-left: 3%;
   margin-right: 5%;
@@ -89,8 +89,8 @@ body {
   padding-top:4%;
   padding-right: 10%;
   padding-bottom: 6%;
-  background-color: rgb(161, 136, 87);
-  opacity: 80%;
+  background-color: rgba(161, 136, 87, 0.7);
+
   
 
 }
@@ -160,7 +160,7 @@ background-color: #df8f3f'
 
 }
 
-.footer {
+/* .footer {
 padding-block: 5rem;
 
 background-color: #0c0d0e;
@@ -226,7 +226,7 @@ flex-wrap: wrap;
 
 .footer-bottom .footer-list {
 flex-direction: row;
-}
+} */
 .btest{
 color: #000000;
 border-radius: 4px;
@@ -241,4 +241,66 @@ background-color: #b5bbbb;
 .btest:active{
 color: #1c1a1a;
 background-color: #bbbdbd;
+}
+
+.footer{
+  width: 1438px;
+  height: 350px;
+  background-color: rgb(14, 13, 13);
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+#links{
+  margin-top: 40px;
+  margin-left: 50px;
+  font-size: 15px;
+}
+
+#address{
+  margin-top: 40px;
+  margin-left: 180px;
+  font-size: 15px;
+}
+
+#others{
+  margin-top: 40px;
+  margin-left: 150px;
+  font-size: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+#logo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-left: -22px;
+  margin-top: 50px;
+}
+
+.newsletter{
+  margin-top: 40px;
+  margin-left: 260px;
+  font-size: 15px;
+}
+
+#email{
+  width: 250px;
+  height: 35px;
+  border: 1px solid;
+}
+
+#sub{
+  width: 250px;
+  height: 35px;
+  background-color:rgba(164, 165, 169, 0.3);
+  border: black;
+}
+
+.watermark{
+  font-size: 15px;
+  opacity: 20%;
 }

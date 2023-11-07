@@ -1,7 +1,7 @@
-* {
+  * {
     margin: 0;
     padding: 0;
-    font-family: fantasy UI;
+    font-family: "poppins", sans-serif;
     box-sizing: border-box;
   }
   .header {
@@ -53,12 +53,6 @@
     padding: 10px 30px;
     border-radius: 3px;
     cursor: pointer;
-  }
-  .btn:hover{
-    background-color: #fdba62;
-    color: #0c0d0e;
-    transition: all 0.5s ease 0s;
-    opacity: 0.8;
   }
   /* body {
     background-image: url(/Images/wxw2.jpg);
@@ -191,14 +185,14 @@ input[type="radio"] {
   font-size: 15px;
   opacity: 20%;
 }
-
   .questions{
     width: 1000px;
-    height: 3500px;
+    height: 2300px;
     background-color: rgba(55, 48, 48, 0.4);
     margin-left: 220px;
     margin-top: 100px;
-    opacity: 80%;
+    opacity: 50%;
+
   }
 
   .headin{
@@ -211,13 +205,12 @@ input[type="radio"] {
     margin-top: 100px;
     color: #f1f1f1;
     font-size: large;
-    margin-bottom: 100px;
    }
   
    .main{
     background-color: #1c1d1e;
     background-size: cover;
-    height: 3800px;
+    height: 2600px;
    }
 
    p{
